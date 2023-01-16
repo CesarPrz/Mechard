@@ -1,0 +1,35 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://ck8c3xothjibk"]
+
+[ext_resource type="StyleBox" uid="uid://bxhcwhd0c2ycb" path="res://ui/textures/buttons/button_gradient_style.tres" id="1_klv00"]
+[ext_resource type="StyleBox" uid="uid://dxe0skjyxqhns" path="res://ui/textures/buttons/button_flat.tres" id="2_bpso6"]
+[ext_resource type="StyleBox" uid="uid://b6p1vscajpg4n" path="res://ui/textures/panels/panel_texture.tres" id="3_x5wx4"]
+[ext_resource type="FontFile" uid="uid://cdudqlcnjnkw" path="res://ui/fonts/Bitwise-m19x.ttf" id="4_c8tof"]
+[ext_resource type="StyleBox" uid="uid://b8t5ib560qcye" path="res://ui/textures/panels/panel_flat.tres" id="4_esnft"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1c1vl"]
+bg_color = Color(0.478431, 0.447059, 0.898039, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.784314, 0.690196, 0.160784, 1)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[resource]
+default_font = ExtResource("4_c8tof")
+Button/styles/hover = ExtResource("1_klv00")
+Button/styles/normal = ExtResource("2_bpso6")
+ItemList/colors/font_selected_color = Color(0.670588, 0.341176, 0.592157, 1)
+ItemList/font_sizes/font_size = 20
+LineEdit/styles/normal = SubResource("StyleBoxFlat_1c1vl")
+MarginContainer/constants/margin_bottom = 15
+MarginContainer/constants/margin_left = 15
+MarginContainer/constants/margin_right = 15
+MarginContainer/constants/margin_top = 15
+Panel/styles/panel = ExtResource("3_x5wx4")
+PanelContainer/styles/panel = ExtResource("3_x5wx4")
+PanelFlat/base_type = &"PanelContainer"
+PanelFlat/styles/panel = ExtResource("4_esnft")

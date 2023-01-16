@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnhrdwyc57mf4"]
+
+[ext_resource type="Theme" uid="uid://ck8c3xothjibk" path="res://ui/main_theme.tres" id="1_4lhwy"]
+[ext_resource type="Script" path="res://scenes/ui/screens/create_part/MechPartsList.cs" id="2_nbr32"]
+[ext_resource type="PackedScene" uid="uid://dcxnxw6r5ht2s" path="res://scenes/ui/buttons/primary_button.tscn" id="3_nvaw1"]
+
+[node name="MechPartsListMargin" type="MarginContainer"]
+custom_minimum_size = Vector2(200, 200)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_4lhwy")
+script = ExtResource("2_nbr32")
+
+[node name="MechPartsPanel" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"PanelFlat"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MechPartsPanel"]
+layout_mode = 2
+
+[node name="ItemList" type="ItemList" parent="MechPartsPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MechPartsPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="PrimaryButtonMargin" parent="MechPartsPanel/VBoxContainer/HBoxContainer" instance=ExtResource("3_nvaw1")]
+layout_mode = 2
+
+[node name="Filler" type="MarginContainer" parent="MechPartsPanel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PrimaryButtonMargin2" parent="MechPartsPanel/VBoxContainer/HBoxContainer" instance=ExtResource("3_nvaw1")]
+layout_mode = 2

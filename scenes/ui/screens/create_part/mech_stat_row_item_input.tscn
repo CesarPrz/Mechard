@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccpxp12rsysx0"]
+
+[ext_resource type="Theme" uid="uid://ck8c3xothjibk" path="res://ui/main_theme.tres" id="1_s378s"]
+[ext_resource type="Script" path="res://scenes/ui/screens/create_part/MechStatRowItemInput.cs" id="2_qt6ro"]
+
+[node name="MechStatRowItemInput" type="HBoxContainer"]
+theme = ExtResource("1_s378s")
+script = ExtResource("2_qt6ro")
+Label = "Test"
+
+[node name="LabelMargin" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="LabelMargin"]
+layout_mode = 2
+text = "Test"
+
+[node name="Fill" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InputMargin" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="LineEdit" type="LineEdit" parent="InputMargin"]
+custom_minimum_size = Vector2(250, 25)
+layout_mode = 2
+size_flags_horizontal = 8

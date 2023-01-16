@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "11OXSVm2s2la9qU9gBiixL0NsDPTLw6Bf2zEIDtQlB7LoVR87WGAQZP7sap5ODg/1vlONx8U3YyzLYWszgpG8Q==",
+  "success": true,
+  "projectFilePath": "C:\\dev\\Mechard\\Mechard.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\César\\.nuget\\packages\\godot.sourcegenerators\\4.0.0-beta.11\\godot.sourcegenerators.4.0.0-beta.11.nupkg.sha512",
+    "C:\\Users\\César\\.nuget\\packages\\godotsharp\\4.0.0-beta.11\\godotsharp.4.0.0-beta.11.nupkg.sha512",
+    "C:\\Users\\César\\.nuget\\packages\\godotsharpeditor\\4.0.0-beta.11\\godotsharpeditor.4.0.0-beta.11.nupkg.sha512"
+  ],
+  "logs": []
+}

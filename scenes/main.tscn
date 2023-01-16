@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://20wromu7y5o"]
+
+[ext_resource type="PackedScene" uid="uid://l4ada6136ny4" path="res://scenes/ui/screens/create_part/create_part_screen.tscn" id="1_o5qn2"]
+
+[node name="main" type="Node2D"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="create_part_screen" parent="UI" instance=ExtResource("1_o5qn2")]

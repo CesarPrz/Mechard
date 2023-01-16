@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgtgxrwvsyp4o"]
+
+[ext_resource type="Theme" uid="uid://ck8c3xothjibk" path="res://ui/main_theme.tres" id="1_w5lvv"]
+[ext_resource type="PackedScene" uid="uid://dcxnxw6r5ht2s" path="res://scenes/ui/buttons/primary_button.tscn" id="2_walv3"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_w5lvv")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+anchor_right = 1.00087
+anchor_bottom = 0.99537
+size_flags_horizontal = 3
+
+[node name="Row" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="LabelContainer" type="MarginContainer" parent="Row"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Row/LabelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_type_variation = &"HeaderLarge"
+text = "A Mechard Game"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Row"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Row/MarginContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer2" parent="Row/MarginContainer2/VBoxContainer" instance=ExtResource("2_walv3")]
+layout_mode = 2

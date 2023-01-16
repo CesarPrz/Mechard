@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://vii3fv3psbpi"]
+
+[ext_resource type="Theme" uid="uid://ck8c3xothjibk" path="res://ui/main_theme.tres" id="1_v0hwf"]
+
+[node name="MechStatRowItemInput" type="HBoxContainer"]
+theme = ExtResource("1_v0hwf")
+
+[node name="LabelMargin" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="LabelMargin"]
+layout_mode = 2
+text = "Tier"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InputMargin" type="MarginContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OptionButton" type="OptionButton" parent="InputMargin"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 2

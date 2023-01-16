@@ -1,0 +1,17 @@
+C:\dev\Mechard\.godot\mono\temp\bin\Debug\Mechard.deps.json
+C:\dev\Mechard\.godot\mono\temp\bin\Debug\Mechard.runtimeconfig.json
+C:\dev\Mechard\.godot\mono\temp\bin\Debug\Mechard.dll
+C:\dev\Mechard\.godot\mono\temp\bin\Debug\Mechard.pdb
+C:\dev\Mechard\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\dev\Mechard\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\dev\Mechard\.godot\mono\temp\obj\Debug\Mechard.csproj.AssemblyReference.cache
+C:\dev\Mechard\.godot\mono\temp\obj\Debug\Mechard.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\Mechard\.godot\mono\temp\obj\Debug\Mechard.AssemblyInfoInputs.cache
+C:\dev\Mechard\.godot\mono\temp\obj\Debug\Mechard.AssemblyInfo.cs
+C:\dev\Mechard\.godot\mono\temp\obj\Debug\Mechard.csproj.CoreCompileInputs.cache
+C:\dev\Mechard\.godot\mono\temp\obj\Debug\Mechard.csproj.CopyComplete
+C:\dev\Mechard\.godot\mono\temp\obj\Debug\Mechard.dll
+C:\dev\Mechard\.godot\mono\temp\obj\Debug\refint\Mechard.dll
+C:\dev\Mechard\.godot\mono\temp\obj\Debug\Mechard.pdb
+C:\dev\Mechard\.godot\mono\temp\obj\Debug\Mechard.genruntimeconfig.cache
+C:\dev\Mechard\.godot\mono\temp\obj\Debug\ref\Mechard.dll
