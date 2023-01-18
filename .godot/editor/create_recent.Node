@@ -1,12 +1,12 @@
+Label
+OptionButton
 MarginContainer
 HBoxContainer
 VBoxContainer
 Control
 Node
 CanvasLayer
-OptionButton
 LineEdit
-Label
 PanelContainer
 Panel
 ItemList

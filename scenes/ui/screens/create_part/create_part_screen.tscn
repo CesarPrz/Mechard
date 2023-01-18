@@ -51,5 +51,5 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="NextButton" parent="PanelContainer/VBoxContainer/BottomLayout" instance=ExtResource("2_2go0k")]
+[node name="SaveButton" parent="PanelContainer/VBoxContainer/BottomLayout" instance=ExtResource("2_2go0k")]
 layout_mode = 2

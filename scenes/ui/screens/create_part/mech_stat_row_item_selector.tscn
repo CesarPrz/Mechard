@@ -1,25 +1,41 @@
-[gd_scene load_steps=2 format=3 uid="uid://vii3fv3psbpi"]
+[gd_scene load_steps=3 format=3 uid="uid://vii3fv3psbpi"]
 
 [ext_resource type="Theme" uid="uid://ck8c3xothjibk" path="res://ui/main_theme.tres" id="1_v0hwf"]
+[ext_resource type="Script" path="res://scenes/ui/buttons/OptionsButton.cs" id="2_8f6q4"]
 
 [node name="MechStatRowItemInput" type="HBoxContainer"]
 theme = ExtResource("1_v0hwf")
+script = ExtResource("2_8f6q4")
+Label = "Label"
+type = 2
 
 [node name="LabelMargin" type="MarginContainer" parent="."]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="LabelMargin"]
 layout_mode = 2
-text = "Tier"
+text = "Label"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="InputMargin" type="MarginContainer" parent="."]
+[node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="OptionButton" type="OptionButton" parent="InputMargin"]
-custom_minimum_size = Vector2(100, 25)
+[node name="OptionButton" type="OptionButton" parent="MarginContainer2"]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+item_count = 5
+selected = 0
+popup/item_0/text = "MAIN_FRAME"
+popup/item_0/id = 0
+popup/item_1/text = "WEAPON"
+popup/item_1/id = 1
+popup/item_2/text = "UTILITY"
+popup/item_2/id = 2
+popup/item_3/text = "SENSORS"
+popup/item_3/id = 3
+popup/item_4/text = "MOVEMENT"
+popup/item_4/id = 4

@@ -4,9 +4,8 @@ res://ui/textures/buttons/button_flat.tres
 res://ui/textures/panels/panel_texture.tres
 res://ui/textures/panels/panel_flat.tres
 res://ui/main_theme.tres
-res://scenes/ui/screens/create_part/create_part_screen.tscn
-res://scenes/ui/buttons/primary_button.tscn
 res://scenes/ui/screens/create_part/mech_part_viewer.tscn
 res://scenes/ui/screens/create_part/mech_stat_row_item_selector.tscn
-res://scenes/ui/screens/create_part/mech_stat_row_item_input.tscn
 res://scenes/ui/screens/create_part/mech_parts_list.tscn
+res://scenes/ui/buttons/primary_button.tscn
+res://scenes/ui/screens/create_part/create_part_screen.tscn

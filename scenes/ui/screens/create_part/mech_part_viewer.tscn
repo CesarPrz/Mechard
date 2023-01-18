@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://5w3jsi10w2gk"]
+[gd_scene load_steps=4 format=3 uid="uid://5w3jsi10w2gk"]
 
 [ext_resource type="Theme" uid="uid://ck8c3xothjibk" path="res://ui/main_theme.tres" id="1_e6i5m"]
 [ext_resource type="PackedScene" uid="uid://ccpxp12rsysx0" path="res://scenes/ui/screens/create_part/mech_stat_row_item_input.tscn" id="1_qe1sc"]
 [ext_resource type="PackedScene" uid="uid://vii3fv3psbpi" path="res://scenes/ui/screens/create_part/mech_stat_row_item_selector.tscn" id="3_o806x"]
-[ext_resource type="PackedScene" uid="uid://dcxnxw6r5ht2s" path="res://scenes/ui/buttons/primary_button.tscn" id="4_56r2a"]
 
 [node name="MechPartViewerMargin" type="MarginContainer"]
 size_flags_horizontal = 3
@@ -20,15 +19,25 @@ layout_mode = 2
 [node name="PartName" type="MarginContainer" parent="MechPartViewerPanel/Row"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_constants/margin_top = 50
+theme_override_constants/margin_top = 25
 
-[node name="LineEdit" type="LineEdit" parent="MechPartViewerPanel/Row/PartName"]
-custom_minimum_size = Vector2(250, 0)
+[node name="Label" type="Label" parent="MechPartViewerPanel/Row/PartName"]
 layout_mode = 2
+size_flags_vertical = 1
+theme_type_variation = &"HeaderLarge"
 
 [node name="ExpandFiller2" type="MarginContainer" parent="MechPartViewerPanel/Row"]
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="Constructor" parent="MechPartViewerPanel/Row" instance=ExtResource("3_o806x")]
+layout_mode = 2
+Label = "Constructor"
+type = 1
+
+[node name="Part" parent="MechPartViewerPanel/Row" instance=ExtResource("3_o806x")]
+layout_mode = 2
+Label = "Part"
 
 [node name="IT" parent="MechPartViewerPanel/Row" instance=ExtResource("1_qe1sc")]
 layout_mode = 2
@@ -48,20 +57,9 @@ Label = "Pénétration (PN)"
 
 [node name="Tier" parent="MechPartViewerPanel/Row" instance=ExtResource("3_o806x")]
 layout_mode = 2
+Label = "Tier"
+type = 0
 
 [node name="ExpandFiller" type="MarginContainer" parent="MechPartViewerPanel/Row"]
 layout_mode = 2
 size_flags_vertical = 3
-
-[node name="BottomLayout" type="HBoxContainer" parent="MechPartViewerPanel/Row"]
-layout_mode = 2
-
-[node name="PrimaryButtonMargin" parent="MechPartViewerPanel/Row/BottomLayout" instance=ExtResource("4_56r2a")]
-layout_mode = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="MechPartViewerPanel/Row/BottomLayout"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="PrimaryButtonMargin2" parent="MechPartViewerPanel/Row/BottomLayout" instance=ExtResource("4_56r2a")]
-layout_mode = 2

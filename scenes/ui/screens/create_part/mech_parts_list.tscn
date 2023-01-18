@@ -29,10 +29,12 @@ layout_mode = 2
 
 [node name="PrimaryButtonMargin" parent="MechPartsPanel/VBoxContainer/HBoxContainer" instance=ExtResource("3_nvaw1")]
 layout_mode = 2
+Text = "Remove selected"
 
 [node name="Filler" type="MarginContainer" parent="MechPartsPanel/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="PrimaryButtonMargin2" parent="MechPartsPanel/VBoxContainer/HBoxContainer" instance=ExtResource("3_nvaw1")]
+[node name="AddPartButton" parent="MechPartsPanel/VBoxContainer/HBoxContainer" instance=ExtResource("3_nvaw1")]
 layout_mode = 2
+Text = "Add a new Part"
