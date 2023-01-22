@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://luhhmges4xjy"]
+
+[ext_resource type="Script" path="res://scenes/ui/screens/fight_screen/StatLabel.cs" id="1_cjsmv"]
+
+[node name="StatMargin" type="MarginContainer"]
+theme_override_constants/margin_bottom = 0
+script = ExtResource("1_cjsmv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="StatName" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "IT"
+
+[node name="StatValue" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "10"

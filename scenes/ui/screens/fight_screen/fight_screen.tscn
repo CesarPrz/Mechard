@@ -1,0 +1,89 @@
+[gd_scene load_steps=5 format=3 uid="uid://cixywvhs0r7gx"]
+
+[ext_resource type="Theme" uid="uid://ck8c3xothjibk" path="res://ui/main_theme.tres" id="1_eycmv"]
+[ext_resource type="Script" path="res://scenes/ui/screens/fight_screen/FightScreen.cs" id="2_m14bg"]
+[ext_resource type="PackedScene" uid="uid://bp0101jl5bivi" path="res://scenes/ui/screens/fight_screen/mech_viewer.tscn" id="3_ort0k"]
+[ext_resource type="PackedScene" uid="uid://dcxnxw6r5ht2s" path="res://scenes/ui/buttons/primary_button.tscn" id="4_x0jxl"]
+
+[node name="fight_screen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_eycmv")
+script = ExtResource("2_m14bg")
+metadata/_edit_use_anchors_ = true
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="MainContentMargin" type="MarginContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/MainContentMargin"]
+layout_mode = 2
+
+[node name="MechListContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/MainContentMargin/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MechListPanel" type="PanelContainer" parent="PanelContainer/VBoxContainer/MainContentMargin/HBoxContainer/MechListContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"PanelFlat"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/MainContentMargin/HBoxContainer/MechListContainer/MechListPanel"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/MainContentMargin/HBoxContainer/MechListContainer/MechListPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/MainContentMargin/HBoxContainer/MechListContainer/MechListPanel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/MainContentMargin/HBoxContainer/MechListContainer/MechListPanel/VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "Order By"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer/MainContentMargin/HBoxContainer/MechListContainer/MechListPanel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="OptionButton" type="OptionButton" parent="PanelContainer/VBoxContainer/MainContentMargin/HBoxContainer/MechListContainer/MechListPanel/VBoxContainer/HBoxContainer/MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MechList" type="ItemList" parent="PanelContainer/VBoxContainer/MainContentMargin/HBoxContainer/MechListContainer/MechListPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/MainContentMargin/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MechViewer" parent="PanelContainer/VBoxContainer/MainContentMargin/HBoxContainer/VBoxContainer" instance=ExtResource("3_ort0k")]
+layout_mode = 2
+
+[node name="BottomLayoutMargin" type="MarginContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="BottomLayout" type="HBoxContainer" parent="PanelContainer/VBoxContainer/BottomLayoutMargin"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PrimaryButtonMargin" parent="PanelContainer/VBoxContainer/BottomLayoutMargin/BottomLayout" instance=ExtResource("4_x0jxl")]
+layout_mode = 2
+Text = "Retour"

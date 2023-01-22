@@ -46,6 +46,7 @@ layout_mode = 2
 
 [node name="BackButton" parent="PanelContainer/VBoxContainer/BottomLayout" instance=ExtResource("2_2go0k")]
 layout_mode = 2
+Text = "Retour"
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/BottomLayout"]
 layout_mode = 2
@@ -53,3 +54,4 @@ size_flags_horizontal = 3
 
 [node name="SaveButton" parent="PanelContainer/VBoxContainer/BottomLayout" instance=ExtResource("2_2go0k")]
 layout_mode = 2
+Text = "Sauvegarder"

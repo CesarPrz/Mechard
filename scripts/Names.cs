@@ -1,12 +1,13 @@
-﻿
+﻿using System;
 using System.Collections.Generic;
 
-internal class Names
+public class Names
 {
     public static List<string> names = new();
-
+    public int unamedIndex = 0;
     public Names()
     {
+
         AddName("Petit Jésus");
         AddName("L'enfant de la PGW");
         AddName("Satan");
@@ -50,6 +51,26 @@ internal class Names
 
     public static void AddName(string name)
     {
-        names.Add(name);
+        if (!names.Contains(name))
+            names.Add(name);
+    }
+
+    public string GetRandomName()
+    {
+        if (names.Count != 0)
+        {
+
+            Random random = new();
+            int nameIndex = random.Next(0, names.Count);
+            string name = names[nameIndex];
+            //  GD.Print("Taking name: " + names[nameIndex] + " from the list : " + names.Count);
+            names.RemoveAt(nameIndex);
+            return name;
+        }
+        else
+        {
+            unamedIndex++;
+            return "Unamed " + unamedIndex;
+        }
     }
 }

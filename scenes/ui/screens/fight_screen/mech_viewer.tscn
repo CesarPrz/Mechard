@@ -1,0 +1,110 @@
+[gd_scene load_steps=5 format=3 uid="uid://bp0101jl5bivi"]
+
+[ext_resource type="Theme" uid="uid://ck8c3xothjibk" path="res://ui/main_theme.tres" id="1_psrt5"]
+[ext_resource type="Script" path="res://scenes/ui/screens/fight_screen/MechViewer.cs" id="2_40t5l"]
+[ext_resource type="PackedScene" uid="uid://cw3sn7ca25te1" path="res://scenes/ui/screens/fight_screen/part_name.tscn" id="2_xjcs5"]
+[ext_resource type="PackedScene" uid="uid://luhhmges4xjy" path="res://scenes/ui/screens/fight_screen/stat_margin.tscn" id="3_242go"]
+
+[node name="MechViewer" type="MarginContainer"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_psrt5")
+script = ExtResource("2_40t5l")
+
+[node name="Panel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+theme_type_variation = &"PanelFlat"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Content" type="VBoxContainer" parent="Panel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="NameMargin" type="MarginContainer" parent="Panel/ScrollContainer/Content"]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="Panel/ScrollContainer/Content/NameMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"HeaderLarge"
+text = "Mech Name"
+
+[node name="HSeparator3" type="HSeparator" parent="Panel/ScrollContainer/Content"]
+layout_mode = 2
+theme = ExtResource("1_psrt5")
+
+[node name="BattleResults" type="VBoxContainer" parent="Panel/ScrollContainer/Content"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/ScrollContainer/Content/BattleResults"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/ScrollContainer/Content/BattleResults/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"HeaderSmall"
+text = "Battle Results"
+
+[node name="Wins" parent="Panel/ScrollContainer/Content/BattleResults" instance=ExtResource("3_242go")]
+layout_mode = 2
+
+[node name="Losses" parent="Panel/ScrollContainer/Content/BattleResults" instance=ExtResource("3_242go")]
+layout_mode = 2
+
+[node name="AverageTurns" parent="Panel/ScrollContainer/Content/BattleResults" instance=ExtResource("3_242go")]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="Panel/ScrollContainer/Content"]
+layout_mode = 2
+theme = ExtResource("1_psrt5")
+
+[node name="Stats" type="VBoxContainer" parent="Panel/ScrollContainer/Content"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/ScrollContainer/Content/Stats"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/ScrollContainer/Content/Stats/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"HeaderSmall"
+text = "Stats"
+
+[node name="IT" parent="Panel/ScrollContainer/Content/Stats" instance=ExtResource("3_242go")]
+layout_mode = 2
+
+[node name="PS" parent="Panel/ScrollContainer/Content/Stats" instance=ExtResource("3_242go")]
+layout_mode = 2
+
+[node name="PN" parent="Panel/ScrollContainer/Content/Stats" instance=ExtResource("3_242go")]
+layout_mode = 2
+
+[node name="AM" parent="Panel/ScrollContainer/Content/Stats" instance=ExtResource("3_242go")]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="Panel/ScrollContainer/Content"]
+layout_mode = 2
+
+[node name="Parts" type="VBoxContainer" parent="Panel/ScrollContainer/Content"]
+layout_mode = 2
+
+[node name="Kernel" parent="Panel/ScrollContainer/Content/Parts" instance=ExtResource("2_xjcs5")]
+layout_mode = 2
+
+[node name="SA" parent="Panel/ScrollContainer/Content/Parts" instance=ExtResource("2_xjcs5")]
+layout_mode = 2
+
+[node name="SU" parent="Panel/ScrollContainer/Content/Parts" instance=ExtResource("2_xjcs5")]
+layout_mode = 2
+
+[node name="SS" parent="Panel/ScrollContainer/Content/Parts" instance=ExtResource("2_xjcs5")]
+layout_mode = 2
+
+[node name="SL" parent="Panel/ScrollContainer/Content/Parts" instance=ExtResource("2_xjcs5")]
+layout_mode = 2

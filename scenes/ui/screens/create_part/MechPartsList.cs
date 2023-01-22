@@ -8,12 +8,12 @@ public partial class MechPartsList : MarginContainer
 	public delegate void PartSelectedDelegate(MechPart part);
 	public event PartSelectedDelegate PartSelected;
 	public TButton AddPartButton;
+	public TButton RemovePartButton;
 	int currentPartIndex = 0;
 
 
 	public void AddPart(MechPart part)
 	{
-		GD.Print("Add part called!");
 		if (itemsList != null)
 		{
 			int id = itemsList.AddItem(part.Name);
@@ -37,7 +37,6 @@ public partial class MechPartsList : MarginContainer
 		itemsList.Clear();
 		foreach (KeyValuePair<int, MechPart> part in parts)
 		{
-			GD.Print("Part id: " + part.Key + " Name: " + part.Value.Name);
 			Texture2D icon = new();
 			switch (part.Value.PartType)
 			{
@@ -59,6 +58,8 @@ public partial class MechPartsList : MarginContainer
 			}
 			_ = itemsList.AddItem(part.Value.Name, icon);
 		}
+		itemsList.Select(currentPartIndex);
+
 	}
 
 	// Called when the node enters the scene tree for the first time.
@@ -66,20 +67,28 @@ public partial class MechPartsList : MarginContainer
 	{
 		itemsList = GetNodeOrNull<ItemList>("MechPartsPanel/VBoxContainer/ItemList");
 		AddPartButton = GetNodeOrNull<TButton>("MechPartsPanel/VBoxContainer/HBoxContainer/AddPartButton");
+		RemovePartButton = GetNodeOrNull<TButton>("MechPartsPanel/VBoxContainer/HBoxContainer/RemovePartButton");
 		if (AddPartButton != null && AddPartButton.Button != null)
 			AddPartButton.Button.Pressed += OnAddPartPressed;
+		if (RemovePartButton != null && RemovePartButton.Button != null)
+			RemovePartButton.Button.Pressed += OnRemovePressed;
 		if (itemsList != null)
 		{
 			itemsList.ItemClicked += OnItemClicked;
 		}
 
-		OnAddPartPressed();
+	}
+
+	private void OnRemovePressed()
+	{
+		_ = parts.Remove(currentPartIndex);
+		currentPartIndex = 0;
 		UpdateList();
+		PartSelected?.Invoke(parts[currentPartIndex]);
 	}
 
 	private void OnAddPartPressed()
 	{
-		GD.Print("Add part pressed");
 		MechPart part = new();
 		AddPart(part);
 		PartSelected?.Invoke(part);
